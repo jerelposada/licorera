@@ -1,0 +1,239 @@
+
+.seccion {
+    padding: 30px 0;
+}
+
+.contenedor{
+    margin: 0 auto;
+    width: 90%;
+}
+
+img{
+    width: 100%;
+}
+
+/*=========================================
+===================================
+img hero
+=========
+=**/
+.site-header{
+    background-image: url(../img/fotoPruebas/img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+ h1{
+    color: white;
+    text-shadow: 8px 4px 3px #000000de;
+    font-size: 60px;
+    text-align: center;
+    text-transform: capitalize;
+}
+/**======================
+=========================
+estilos de la navegacion
+=========================
+=========================***/
+nav.modile{
+    display: none;
+}
+nav.computer {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #000000c9;
+    padding: 12px;
+}
+
+
+nav.computer a{
+    color: blanchedalmond;
+    font-size: 30px;
+    padding: 5px;
+}
+
+nav.computer a:hover{
+    background-color: #fda909;
+    border-radius: 7px;
+    transition: all .7s cubic-bezier(0.25, 0.1, 0, 0.54);
+    border: 2px solid #fe4918 ;
+}
+
+nav.computer a:nth-child(3){
+    border: 2px solid #fe4918 ;
+}
+
+
+
+nav.computer a:hover{
+    cursor: pointer;
+    color: #020080;
+}
+
+/**======================
+=========================
+productos destacados
+=========================
+=========================***/
+
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2.4em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 200;
+    color: white;
+    margin-bottom: 22px;
+}
+
+h2::after {
+    content: '';
+    margin: 0 auto;
+    background-image: url(../img/separador.png);
+    height: 30px;
+    width: 100px;
+    display: block;
+}
+
+.products-destacados{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-destacado{
+    background-color: white;
+    width: calc(33.3% - 1em);
+    margin: 0 auto;
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 15px;
+}
+
+p.oferta {
+    font-size: 1.8em;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    background-color: #04ff00ba;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: 900;
+}
+
+.product-destacado img , .product-destacado {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+ 
+}
+
+.contenido-destacado{
+    background-color: #1c212e;
+}
+
+.card-description h3{
+    margin-top: 0;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 30px;
+}
+
+p.description{
+    text-align: center;
+    font-size: 1.2em;
+    color: black;
+    font-weight: 200;
+    margin-bottom: 25px;
+}
+
+.btn{
+    display: inline-block;
+    width: 100%;
+    font-size: 35px;
+    background-color: #fda909;
+    border: none;
+    color: black;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-radius: 17px;
+    padding: 5px;
+}
+
+/**======================
+=========================
+productos 
+=========================
+=========================***/
+
+main h2{
+    color: black;
+}
+
+
+p.oferta.oferta-50{
+    background-color: black;
+}
+
+
+main .product-destacado img {
+    border-radius: 10px;
+}
+
+main.seccion .products-destacados.contenedor {
+    background-color: #fda909;
+    padding: 18px;
+
+}
+
+main.seccion .product-destacado{
+    background-color: #00000087;
+    padding: 5px;
+
+}
+
+
+.description-product-principal p{
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.description-product-principal p:first-child{
+    color: white;
+    font-weight: 900;
+    margin-bottom: 0;
+    text-decoration: underline;
+    text-decoration-color: #011375;
+    text-decoration-style: wavy;
+    text-decoration-thickness: from-font;
+    font-size: 25px;
+}
+
+
+
+main.seccion .description-product-principal .btn {
+    display: inline-block;
+    width: 100%;
+    font-size: 35px;
+    background-color: #011375;
+    border: none;
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    border-radius: 17px;
+    padding: 5px;
+}
+
+
+main.seccion hr {
+   display: none;
+}
