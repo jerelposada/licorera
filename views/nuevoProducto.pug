@@ -1,0 +1,32 @@
+extends layout/backend
+
+block contenido 
+    .contenido-principal
+        h1 #{nombrePagina}
+        //-si  el controlador( backend ) mando errores  lo va a mostrar en esta vista 
+        if errores
+            each error in errores 
+                .alerta= error.texto
+            
+        
+
+        form(action="/xxx/nuevoProducto", class="agregar-proyecto",  method="post" , )
+            .campo 
+                label(for="nombre") Nombre Producto 
+                input(type="text" id="nombre" name="nombre" placeholder="nombre del producto" required )  
+            .campo 
+                label(for="descriptionShort") descripcion Corta 
+                input(type="text" id="descriptionShort" name="descriptionShort" placeholder="descripcion Corta" required )
+            .campo 
+                label(for="descriptionLong") descripcion larga 
+                textarea(type="text" id="descriptionLong" name="descriptionLong" placeholder="descripcion larga" cols="70", rows="10" required )
+            .campo 
+                label(for="Cantidad") Cantidad 
+                input(type="number" id="Cantidad" name="Cantidad" placeholder="Cantidad" required )    
+
+            .campo 
+                label(for="category") categoria
+                input(type="text" id="category" name="category" placeholder="categoria" required )
+
+            .campo.enviar 
+                input(type="submit" class="boton" placeholder="nombre del producto")  
