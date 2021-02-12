@@ -10,7 +10,7 @@ block contenido
             
         
 
-        form(action="/xxx/nuevoProducto", class="agregar-proyecto",  method="post" , )
+        form(action="/xxx/nuevoProducto", class="agregar-proyecto dropzone", id="my-awesome-dropzone",  method="post"  )
             .campo 
                 label(for="nombre") Nombre Producto 
                 input(type="text" id="nombre" name="nombre" placeholder="nombre del producto" required )  
@@ -22,11 +22,17 @@ block contenido
                 textarea(type="text" id="descriptionLong" name="descriptionLong" placeholder="descripcion larga" cols="70", rows="10" required )
             .campo 
                 label(for="Cantidad") Cantidad 
-                input(type="number" id="Cantidad" name="Cantidad" placeholder="Cantidad" required )    
+                input(type="number" id="Cantidad" name="cantidad" placeholder="Cantidad" required )    
 
             .campo 
                 label(for="category") categoria
                 input(type="text" id="category" name="category" placeholder="categoria" required )
 
+
+            input(type="file" id="category" name="file" placeholder="categoria" required )
+            
+
             .campo.enviar 
                 input(type="submit" class="boton" placeholder="nombre del producto")  
+
+    script(src="/js/dropzone.min.js")
