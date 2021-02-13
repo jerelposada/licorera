@@ -3,6 +3,7 @@ const routesFrontend = require('./routes/frontendRoutes');
 const routesBackend= require('./routes/backendRoutes');
 const path = require('path');
 const bodyparser = require ('body-parser');
+const fileUpload = require('express-fileupload');
 
 // crear la conexion a la bd 
 const db = require('./config/db');
@@ -15,6 +16,8 @@ db.sync()
 require('./lib/models/Productos');
 
 const app = express();
+
+app.use(fileUpload());
 
 const port = process.env.PORT || 3005;
 

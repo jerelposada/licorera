@@ -237,3 +237,70 @@ main.seccion .description-product-principal .btn {
 main.seccion hr {
    display: none;
 }
+
+
+section.seccion.superOferta{
+    background-color: #07252d;
+    padding-bottom: 10rem;
+    
+} 
+
+
+section.seccion.superOferta h3 {
+    color: #0e3742;
+    letter-spacing: 3px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 150px;
+    margin-bottom: 77px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0008);
+    line-height: 0.70em;
+    outline: none;
+    animation: animate 5s linear infinite;
+}
+
+
+@keyframes animate{
+    0%,50.1%,50.2%,50.3%,50.5%{
+        color: #0e3742;
+        box-shadow: none;
+    }
+
+    50%,100%{
+        color: white;
+        text-shadow:  0 0 10px #03bcf4,
+                      0 0 20px #03bcf4,
+                      0 0 40px #03bcf4,
+                      0 0 80px #03bcf4,
+                      0 0 160px #03bcf4;  
+    }
+
+
+}
+    
+
+.contenido-superOferta{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.contenido-superOferta img {
+    width: calc(60% - 1em);
+    box-shadow:  0 0 10px #03bcf4;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.contenido-superOferta p{
+    width: calc(60% - 1em);
+    color: white;
+    margin: 0px 20px;
+    font-size: x-large;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    line-height: 1.5;
+
+}
