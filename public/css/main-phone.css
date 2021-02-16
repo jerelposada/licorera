@@ -18,7 +18,7 @@ img hero
 =========
 =**/
 .site-header{
-    background-image: url(../img/fotoPruebas/img1.jpg);
+    background-image: url(../img/img1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -92,6 +92,12 @@ h2::after {
     margin-bottom: 15px;
 }
 
+.product-destacado img {
+    max-width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
 p.oferta {
     font-size: 1.8em;
     color: white;
@@ -140,8 +146,12 @@ p.description{
     margin-bottom: 25px;
     border-radius: 17px;
     padding: 5px;
+    text-align: center;
 }
 
+.btn:hover{
+    background-color: #0000ff73;
+}
 /**======================
 =========================
 productos  principal 
@@ -216,3 +226,50 @@ main.seccion hr {
     padding: 1px;
 
 }
+
+section.seccion.superOferta{
+    background-color: #07252d;
+    padding-bottom: 10rem;
+    
+} 
+
+section.seccion.superOferta h3 {
+    color: #0e3742;
+    letter-spacing: 3px;
+    font-size: 40px;
+    text-align: center;
+    animation: animate 5s linear infinite;
+}
+
+
+@keyframes animate{
+    0%{
+        color: #0e3742;
+        box-shadow: none;
+    }
+
+    100%{
+        color: white;
+        text-shadow:  0 0 10px #03bcf4,
+                      0 0 20px #03bcf4,
+                      0 0 40px #03bcf4,
+                      0 0 80px #03bcf4,
+                      0 0 160px #03bcf4;  
+    }
+
+
+}
+
+
+.contenido-superOferta p{
+    color: white;
+    margin: 0px 20px;
+    font-size: x-large;
+    margin-bottom: 100px;
+
+}
+
+.contenido-superOferta p:last-of-type{
+    margin-bottom: 0px;
+}
+    

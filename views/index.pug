@@ -18,78 +18,30 @@ block contenido
         section.seccion.contenido-destacado
             h2 Productos destacados
             .products-destacados.contenedor
-                div(class="product-destacado" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" )
-                    img(loading="lazy", class="lazyload" data-src="/img/fotoPruebas/img2.jpg", alt="imagen pruba")
-                    p.oferta oferta
-                    .card-description.contenedor
-                        h3.title cerveza alemana
-                        p.description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quos quis quia dolores 
-                        input(type="button", value="ver producto" class="btn") 
+                if(productos.length)
+                    each producto in productos
+                        div(class="product-destacado" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" )
+                            img(loading="lazy", class="lazyload" data-src=`/img/${producto.nombreArchivo}`, alt="imagen pruba")
+                            p.oferta oferta
+                            .card-description.contenedor
+                                h3.title= producto.nombre
+                                p.description= producto.descriptionShort 
+                                a(href=`/${producto.url}` class="btn") ver producto 
+                                
 
-                div(class="product-destacado" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" )
-                    img(loading="lazy" , class="lazyload", data-src="/img/fotoPruebas/img3.jpg", alt="imagen pruba")
-                    p.oferta oferta
-                    .card-description.contenedor
-                        h3.title cerveza alemana
-                        p.description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quos quis quia dolores 
-                        input(type="button", value="ver producto" class="btn") 
-
-
-                .product-destacado
-                    img(loading="lazy", class="lazyload" ,data-src="/img/fotoPruebas/img4.jpg", alt="imagen pruba")
-                    .card-description.contenedor
-                        h3.title cerveza alemana
-                        p.description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quos quis quia dolores 
-                        input(type="button", value="ver producto" class="btn")
-
-                div(class="product-destacado" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" )
-                    img( loading="lazy" , class="lazyload", data-src="/img/fotoPruebas/img5.jpg", alt="imagen pruba")
-                    .card-description.contenedor
-                        h3.title cerveza alemana
-                        p.description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quos quis quia dolores 
-                        input(type="button", value="ver producto" class="btn")
-
-                .product-destacado
-                    img( loading="lazy" , class="lazyload", data-src="/img/fotoPruebas/img6.jpg" , alt="imagen pruba")
-                    .card-description.contenedor
-                        h3.title cerveza alemana
-                        p.description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quos quis quia dolores 
-                        input(type="button", value="ver producto" class="btn")
-
-                div(class="product-destacado" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" )
-                    img( loading="lazy" , class="lazyload", data-src="/img/fotoPruebas/img9.jpg" , alt="imagen pruba")
-                    .card-description.contenedor
-                        h3.title cerveza alemana
-                        p.description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quos quis quia dolores 
-                        input(type="button", value="ver producto" class="btn")
-
-                .product-destacado
-                    img( loading="lazy" , class="lazyload", data-src="/img/fotoPruebas/img8.jpg" , alt="imagen pruba")
-                    .card-description.contenedor
-                        h3.title cerveza alemana
-                        p.description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quos quis quia dolores 
-                        input(type="button", value="ver producto" class="btn")
-
-                div(class="product-destacado" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" )
-                    img( loading="lazy" , class="lazyload", data-src="/img/fotoPruebas/img10.jpg" , alt="imagen pruba")
-                    .card-description.contenedor
-                        h3.title cerveza alemana
-                        p.description Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam, quos quis quia dolores 
-                        input(type="button", value="ver producto" class="btn")
 
         section.seccion.superOferta
             h2 super ofertas lleva los mejores whisky del mundo al mejor precio
-            h3 whisky black label
-            .contenido-superOferta.contenedor
-                img(loading="lazy", class="lazyload", data-src="/img/fotoPruebas/img1.jpg", alt="imagen pruba")
-                p Desde 1820, estandarte de calidad escocesa y bandera del sabor de la inspiración. 
 
-            h3 WHISKY BUCHANANS 12 AÑOS 
-            .contenido-superOferta.contenedor
-                p Un clásico por más de 130 años, el whisky de 12 años de Buchanan's,
-                img(loading="lazy", class="lazyload", data-src="/img/fotoPruebas/img1.jpg", alt="imagen pruba")
+            if(productos.length)
+                each producto in productos    
+                    h3= producto.nombre
+                    .contenido-superOferta.contenedor
+                        img(loading="lazy", class="lazyload", data-src=`/img/${producto.nombreArchivo}`, alt="imagen pruba")
+                        p= producto.descriptionShort 
+
+
                 
-
         main.seccion
             h2 los mejores vinos
             .div(class="products-destacados contenedor" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="300" data-aos-easing="ease-in-sine") 

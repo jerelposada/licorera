@@ -5,8 +5,12 @@ const handlers = require('../lib/controllers/frontendController')
 
 module.exports = function() {
 
-    router.get('/about', handlers.about);
+    
     router.get('/',handlers.index);
 
+
+    //listar Proyecto
+
+    router.get('/:url', handlers.productosUrl)
     return router;
 }
